@@ -1,5 +1,5 @@
 import React from "react";
-import "./Discover.module.css";
+import Style from "./Discover.module.css";
 const Discover = () => {
   return <div>Discover</div>;
 };

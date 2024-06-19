@@ -1,5 +1,5 @@
 import React from "react";
-import "./Notificqation.module.css";
+import Style from "./Notificqation.module.css";
 const Notification = () => {
   return <div>Notification</div>;
 };
