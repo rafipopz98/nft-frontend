@@ -1,9 +1,9 @@
+import { Hero } from '../components/componentIndex';
 import React from 'react'
-
-import { Navbar } from '../components/componentIndex'
+import Style from '../styles/index.module.css'
 const Home = () => {
   return (
-    <div>home</div>
+    <div className={Style.homepage}><Hero /></div>
   )
 }
 

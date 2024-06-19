@@ -41,6 +41,8 @@ import nft_image_2 from "./nft-image-2.png";
 import nft_image_3 from "./nft-image-3.png";
 import musiceWave from "./musicwave.png";
 import update from "./update.png";
+import hero1 from './hero2.png'
+import herosvg from './hero.svg'
 
 export default {
   collection,
@@ -52,6 +54,8 @@ export default {
   getAble,
   nft_1,
   hero,
+  hero1,
+  herosvg,
   creatorbackground1,
   creatorbackground2,
   creatorbackground3,
