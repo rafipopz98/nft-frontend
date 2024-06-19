@@ -2,7 +2,6 @@ import React from "react";
 import Style from "./Notificqation.module.css";
 import Image from "next/image";
 import images from "../../../img";
-import { diffChars } from "../../../node_modules/ts-node/node_modules/diff/lib/index.es6";
 const Notification = () => {
   return (
     <div className={Style.notification}>

@@ -63,6 +63,7 @@ const Sidebar = ({ setOpenSidebarMenu }) => {
     },
   ];
   const closeSidebar = () => {
+    console.log("dsd");
     setOpenSidebarMenu(false);
   };
 
@@ -74,11 +75,7 @@ const Sidebar = ({ setOpenSidebarMenu }) => {
     }
   };
   const openHelpMenu = () => {
-    if (!openHelpCenter) {
-      setOpenHelpCenter(true);
-    } else {
-      setOpenHelpCenter(false);
-    }
+    setOpenHelpCenter(!openHelpCenter);
   };
 
   return (
@@ -117,16 +114,16 @@ const Sidebar = ({ setOpenSidebarMenu }) => {
           >
             <p>Discover</p>
             <TiArrowSortedDown />
-            {openDiscover && (
-              <div className={Style.sidebar_discover}>
-                {discoverData.map((item, index) => {
-                  <p className={S} key={index}>
-                    <Link href={{ pathname: `${item.link}` }}>{item.name}</Link>
-                  </p>;
-                })}
-              </div>
-            )}
           </div>
+          {openDiscover && (
+            <div className={Style.sidebar_discover}>
+              {discoverData.map((item, index) => (
+                <p key={index}>
+                  <Link href={{ pathname: `${item.link}` }}>{item.name}</Link>
+                </p>
+              ))}
+            </div>
+          )}
         </div>
 
         <div>
@@ -136,21 +133,22 @@ const Sidebar = ({ setOpenSidebarMenu }) => {
           >
             <p>Help Center</p>
             <TiArrowSortedDown />
-            {openHelpCenter && (
-              <div className={Style.sidebar_discover}>
-                {helpcenterData.map((item, index) => {
-                  <p className={S} key={index}>
-                    <Link href={{ pathname: `${item.link}` }}>{item.name}</Link>
-                  </p>;
-                })}
-              </div>
-            )}
           </div>
+
+          {openHelpCenter && (
+            <div className={Style.sidebar_discover}>
+              {helpcenterData.map((item, index) => (
+                <p key={index}>
+                  <Link href={{ pathname: `${item.link}` }}>{item.name}</Link>
+                </p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <div className={Style.sidebar_button}>
-        <Button btnText="Create" />
-        <Button btnText="Connect Wallet" />
+        <Button btnText="Create" handleClick={() => {}} />
+        <Button btnText="Connect Wallet" handleClick={() => {}} />
       </div>
     </div>
   );
