@@ -1,10 +1,10 @@
 import "../styles/globals.css";
-import { Navbar } from "../components/componentIndex";
-import { Footer } from '../components/componentIndex'
+import { Navbar, BigNftSlider, Footer } from "../components/componentIndex";
 const MyApp = ({ Component, pageProps }) => (
   <div>
     <Navbar />
     <Component {...pageProps} />
+    <BigNftSlider />
     <Footer />
   </div>
 );
